@@ -1,0 +1,17 @@
+C:\Users\leand\RiderProjects\HotelCard\src\HotelCard.Infra.Data\bin\Debug\net8.0\HotelCard.Infra.Data.deps.json
+C:\Users\leand\RiderProjects\HotelCard\src\HotelCard.Infra.Data\bin\Debug\net8.0\HotelCard.Infra.Data.dll
+C:\Users\leand\RiderProjects\HotelCard\src\HotelCard.Infra.Data\bin\Debug\net8.0\HotelCard.Infra.Data.pdb
+C:\Users\leand\RiderProjects\HotelCard\src\HotelCard.Infra.Data\bin\Debug\net8.0\HotelCard.Core.dll
+C:\Users\leand\RiderProjects\HotelCard\src\HotelCard.Infra.Data\bin\Debug\net8.0\HotelCard.Domain.dll
+C:\Users\leand\RiderProjects\HotelCard\src\HotelCard.Infra.Data\bin\Debug\net8.0\HotelCard.Domain.pdb
+C:\Users\leand\RiderProjects\HotelCard\src\HotelCard.Infra.Data\bin\Debug\net8.0\HotelCard.Core.pdb
+C:\Users\leand\RiderProjects\HotelCard\src\HotelCard.Infra.Data\obj\Debug\net8.0\HotelCard.Infra.Data.csproj.AssemblyReference.cache
+C:\Users\leand\RiderProjects\HotelCard\src\HotelCard.Infra.Data\obj\Debug\net8.0\HotelCard.Infra.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\leand\RiderProjects\HotelCard\src\HotelCard.Infra.Data\obj\Debug\net8.0\HotelCard.Infra.Data.AssemblyInfoInputs.cache
+C:\Users\leand\RiderProjects\HotelCard\src\HotelCard.Infra.Data\obj\Debug\net8.0\HotelCard.Infra.Data.AssemblyInfo.cs
+C:\Users\leand\RiderProjects\HotelCard\src\HotelCard.Infra.Data\obj\Debug\net8.0\HotelCard.Infra.Data.csproj.CoreCompileInputs.cache
+C:\Users\leand\RiderProjects\HotelCard\src\HotelCard.Infra.Data\obj\Debug\net8.0\HotelCar.F953DC28.Up2Date
+C:\Users\leand\RiderProjects\HotelCard\src\HotelCard.Infra.Data\obj\Debug\net8.0\HotelCard.Infra.Data.dll
+C:\Users\leand\RiderProjects\HotelCard\src\HotelCard.Infra.Data\obj\Debug\net8.0\refint\HotelCard.Infra.Data.dll
+C:\Users\leand\RiderProjects\HotelCard\src\HotelCard.Infra.Data\obj\Debug\net8.0\HotelCard.Infra.Data.pdb
+C:\Users\leand\RiderProjects\HotelCard\src\HotelCard.Infra.Data\obj\Debug\net8.0\ref\HotelCard.Infra.Data.dll

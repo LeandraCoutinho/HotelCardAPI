@@ -1,0 +1,15 @@
+C:\Users\leand\RiderProjects\HotelCard\src\HotelCard.Domain\bin\Debug\net8.0\HotelCard.Domain.deps.json
+C:\Users\leand\RiderProjects\HotelCard\src\HotelCard.Domain\bin\Debug\net8.0\HotelCard.Domain.dll
+C:\Users\leand\RiderProjects\HotelCard\src\HotelCard.Domain\bin\Debug\net8.0\HotelCard.Domain.pdb
+C:\Users\leand\RiderProjects\HotelCard\src\HotelCard.Domain\bin\Debug\net8.0\HotelCard.Core.dll
+C:\Users\leand\RiderProjects\HotelCard\src\HotelCard.Domain\bin\Debug\net8.0\HotelCard.Core.pdb
+C:\Users\leand\RiderProjects\HotelCard\src\HotelCard.Domain\obj\Debug\net8.0\HotelCard.Domain.csproj.AssemblyReference.cache
+C:\Users\leand\RiderProjects\HotelCard\src\HotelCard.Domain\obj\Debug\net8.0\HotelCard.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\leand\RiderProjects\HotelCard\src\HotelCard.Domain\obj\Debug\net8.0\HotelCard.Domain.AssemblyInfoInputs.cache
+C:\Users\leand\RiderProjects\HotelCard\src\HotelCard.Domain\obj\Debug\net8.0\HotelCard.Domain.AssemblyInfo.cs
+C:\Users\leand\RiderProjects\HotelCard\src\HotelCard.Domain\obj\Debug\net8.0\HotelCard.Domain.csproj.CoreCompileInputs.cache
+C:\Users\leand\RiderProjects\HotelCard\src\HotelCard.Domain\obj\Debug\net8.0\HotelCar.A9961482.Up2Date
+C:\Users\leand\RiderProjects\HotelCard\src\HotelCard.Domain\obj\Debug\net8.0\HotelCard.Domain.dll
+C:\Users\leand\RiderProjects\HotelCard\src\HotelCard.Domain\obj\Debug\net8.0\refint\HotelCard.Domain.dll
+C:\Users\leand\RiderProjects\HotelCard\src\HotelCard.Domain\obj\Debug\net8.0\HotelCard.Domain.pdb
+C:\Users\leand\RiderProjects\HotelCard\src\HotelCard.Domain\obj\Debug\net8.0\ref\HotelCard.Domain.dll

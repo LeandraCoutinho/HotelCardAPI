@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C95CA24A-80BB-439A-8EDD-053CDF1A429A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelCard.Application", "src\HotelCard.Application\HotelCard.Application.csproj", "{0C1FABD4-AB71-4D12-B168-39439E8EFFA2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelCard.Domain", "src\HotelCard.Domain\HotelCard.Domain.csproj", "{8D72F8CD-58C0-4E89-A84D-2D6CAEE04689}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelCard.Infra.Data", "src\HotelCard.Infra.Data\HotelCard.Infra.Data.csproj", "{1F860B3F-6EA8-4D99-812A-CE1366699D1E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelCard.API", "src\HotelCard.API\HotelCard.API.csproj", "{AB233F70-A0AE-4BA7-BDD3-DC901A3DA851}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelCard.Core", "src\HotelCard.Core\HotelCard.Core.csproj", "{B5A239F0-8F71-42C6-B721-CD1BDADACC89}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0C1FABD4-AB71-4D12-B168-39439E8EFFA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C1FABD4-AB71-4D12-B168-39439E8EFFA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C1FABD4-AB71-4D12-B168-39439E8EFFA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C1FABD4-AB71-4D12-B168-39439E8EFFA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D72F8CD-58C0-4E89-A84D-2D6CAEE04689}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D72F8CD-58C0-4E89-A84D-2D6CAEE04689}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D72F8CD-58C0-4E89-A84D-2D6CAEE04689}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D72F8CD-58C0-4E89-A84D-2D6CAEE04689}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F860B3F-6EA8-4D99-812A-CE1366699D1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F860B3F-6EA8-4D99-812A-CE1366699D1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F860B3F-6EA8-4D99-812A-CE1366699D1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F860B3F-6EA8-4D99-812A-CE1366699D1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB233F70-A0AE-4BA7-BDD3-DC901A3DA851}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB233F70-A0AE-4BA7-BDD3-DC901A3DA851}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB233F70-A0AE-4BA7-BDD3-DC901A3DA851}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB233F70-A0AE-4BA7-BDD3-DC901A3DA851}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5A239F0-8F71-42C6-B721-CD1BDADACC89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5A239F0-8F71-42C6-B721-CD1BDADACC89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5A239F0-8F71-42C6-B721-CD1BDADACC89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5A239F0-8F71-42C6-B721-CD1BDADACC89}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0C1FABD4-AB71-4D12-B168-39439E8EFFA2} = {C95CA24A-80BB-439A-8EDD-053CDF1A429A}
+		{8D72F8CD-58C0-4E89-A84D-2D6CAEE04689} = {C95CA24A-80BB-439A-8EDD-053CDF1A429A}
+		{1F860B3F-6EA8-4D99-812A-CE1366699D1E} = {C95CA24A-80BB-439A-8EDD-053CDF1A429A}
+		{AB233F70-A0AE-4BA7-BDD3-DC901A3DA851} = {C95CA24A-80BB-439A-8EDD-053CDF1A429A}
+		{B5A239F0-8F71-42C6-B721-CD1BDADACC89} = {C95CA24A-80BB-439A-8EDD-053CDF1A429A}
+	EndGlobalSection
+EndGlobal
