@@ -32,24 +32,22 @@ public class EmployeeService : BaseService, IEmployeeService
         }
 
         var employee = Mapper.Map<Employee>(employeeDto);
-        Console.WriteLine($"Nome do funcionário: {employee.Name}");
         
         Notificator.Handle(employee.Validate());
         if(Notificator.HasNotification)
             return null;
 
-        var password = Guid.NewGuid().ToString();
-        employee.Password = _hasher.HashPassword(employee, password);
-        employee.PasswordTemple = true;
-        await _employeeRepository.Add(employee);
+        employee.Password = _hasher.HashPassword(employee, employee.Password);
+        var employeeCreated = await _employeeRepository.Add(employee);
         
-        if (await _employeeRepository.UnitOfWork.Commit())
+        if (await CommitChanges())
         {
-            await _emailService.SendEmailFirstAccess(employee, password);
-            return Mapper.Map<EmployeeDto>(employee);
+            return Mapper.Map<EmployeeDto>(employeeCreated);
         }
         
         Notificator.Handle("Não foi possivel criar a entidade");
         return null;
     }
+    
+    async Task<bool> CommitChanges() => await _employeeRepository.UnitOfWork.Commit();
 }

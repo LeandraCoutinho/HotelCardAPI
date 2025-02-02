@@ -15,9 +15,7 @@ public class EmployeeMap : IEntityTypeConfiguration<Employee>
         builder.Property(e => e.Email);
 
         builder.Property(e => e.Password);
-
-        builder.Property(e => e.PasswordTemple);
-
+        
         builder.Property(e => e.TokenResetPassword)
             .IsRequired(false);
         
