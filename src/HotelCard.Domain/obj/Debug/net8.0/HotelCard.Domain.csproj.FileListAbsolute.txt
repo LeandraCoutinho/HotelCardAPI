@@ -13,3 +13,4 @@ C:\Users\leand\RiderProjects\HotelCard\src\HotelCard.Domain\obj\Debug\net8.0\Hot
 C:\Users\leand\RiderProjects\HotelCard\src\HotelCard.Domain\obj\Debug\net8.0\refint\HotelCard.Domain.dll
 C:\Users\leand\RiderProjects\HotelCard\src\HotelCard.Domain\obj\Debug\net8.0\HotelCard.Domain.pdb
 C:\Users\leand\RiderProjects\HotelCard\src\HotelCard.Domain\obj\Debug\net8.0\ref\HotelCard.Domain.dll
+C:\Users\leand\RiderProjects\HotelCard\src\HotelCard.Domain\obj\Debug\net8.0\HotelCard.Domain.sourcelink.json

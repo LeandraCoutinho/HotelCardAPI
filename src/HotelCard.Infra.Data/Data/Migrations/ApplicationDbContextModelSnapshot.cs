@@ -51,46 +51,6 @@ namespace HotelCard.Infra.Data.Data.Migrations
                     b.ToTable("AccessAreas");
                 });
 
-            modelBuilder.Entity("HotelCard.Domain.Entities.Administrator", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime(6)");
-
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("Password")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<bool>("PasswordTemple")
-                        .HasColumnType("tinyint(1)");
-
-                    b.Property<string>("Role")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<DateTime?>("TokenResetExpiresAt")
-                        .HasColumnType("datetime(6)");
-
-                    b.Property<string>("TokenResetPassword")
-                        .HasColumnType("longtext");
-
-                    b.Property<DateTime>("UpdatedAt")
-                        .HasColumnType("datetime(6)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Administrators");
-                });
-
             modelBuilder.Entity("HotelCard.Domain.Entities.Consumption", b =>
                 {
                     b.Property<int>("Id")
@@ -188,6 +148,50 @@ namespace HotelCard.Infra.Data.Data.Migrations
                     b.ToTable("ContractRooms");
                 });
 
+            modelBuilder.Entity("HotelCard.Domain.Entities.Employee", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<bool>("PasswordTemple")
+                        .HasColumnType("tinyint(1)");
+
+                    b.Property<string>("Role")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<DateTime?>("TokenResetExpiresAt")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("TokenResetPassword")
+                        .HasColumnType("longtext");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("datetime(6)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Employees");
+                });
+
             modelBuilder.Entity("HotelCard.Domain.Entities.Guest", b =>
                 {
                     b.Property<int>("Id")
@@ -259,46 +263,6 @@ namespace HotelCard.Infra.Data.Data.Migrations
                     b.HasIndex("AccessAreaId");
 
                     b.ToTable("GuestAccessAreas");
-                });
-
-            modelBuilder.Entity("HotelCard.Domain.Entities.Operator", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime(6)");
-
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("Password")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<bool>("PasswordTemple")
-                        .HasColumnType("tinyint(1)");
-
-                    b.Property<string>("Role")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<DateTime?>("TokenResetExpiresAt")
-                        .HasColumnType("datetime(6)");
-
-                    b.Property<string>("TokenResetPassword")
-                        .HasColumnType("longtext");
-
-                    b.Property<DateTime>("UpdatedAt")
-                        .HasColumnType("datetime(6)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Operators");
                 });
 
             modelBuilder.Entity("HotelCard.Domain.Entities.Product", b =>

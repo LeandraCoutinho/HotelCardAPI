@@ -17,3 +17,4 @@ C:\Users\leand\RiderProjects\HotelCard\src\HotelCard.Application\obj\Debug\net8.
 C:\Users\leand\RiderProjects\HotelCard\src\HotelCard.Application\obj\Debug\net8.0\refint\HotelCard.Application.dll
 C:\Users\leand\RiderProjects\HotelCard\src\HotelCard.Application\obj\Debug\net8.0\HotelCard.Application.pdb
 C:\Users\leand\RiderProjects\HotelCard\src\HotelCard.Application\obj\Debug\net8.0\ref\HotelCard.Application.dll
+C:\Users\leand\RiderProjects\HotelCard\src\HotelCard.Application\obj\Debug\net8.0\HotelCard.Application.sourcelink.json

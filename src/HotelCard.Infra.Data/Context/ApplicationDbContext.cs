@@ -11,7 +11,7 @@ public class ApplicationDbContext : DbContext, IUnitOfWork
 
     public DbSet<AccessArea> AccessAreas { get; set; }
 
-    public DbSet<Administrator> Administrators { get; set; }
+    public DbSet<Employee> Employees { get; set; }
 
     public DbSet<Consumption> Consumptions { get; set; }
 
@@ -24,9 +24,7 @@ public class ApplicationDbContext : DbContext, IUnitOfWork
     public DbSet<Guest> Guests { get; set; }
 
     public DbSet<GuestAccessArea> GuestAccessAreas { get; set; }
-
-    public DbSet<Operator> Operators { get; set; }
-
+    
     public DbSet<Product> Products { get; set; }
 
     public DbSet<Room> Rooms { get; set; }

@@ -15,3 +15,4 @@ C:\Users\leand\RiderProjects\HotelCard\src\HotelCard.Infra.Data\obj\Debug\net8.0
 C:\Users\leand\RiderProjects\HotelCard\src\HotelCard.Infra.Data\obj\Debug\net8.0\refint\HotelCard.Infra.Data.dll
 C:\Users\leand\RiderProjects\HotelCard\src\HotelCard.Infra.Data\obj\Debug\net8.0\HotelCard.Infra.Data.pdb
 C:\Users\leand\RiderProjects\HotelCard\src\HotelCard.Infra.Data\obj\Debug\net8.0\ref\HotelCard.Infra.Data.dll
+C:\Users\leand\RiderProjects\HotelCard\src\HotelCard.Infra.Data\obj\Debug\net8.0\HotelCard.Infra.Data.sourcelink.json

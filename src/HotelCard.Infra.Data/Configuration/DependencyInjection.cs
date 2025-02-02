@@ -1,4 +1,6 @@
+using HotelCard.Domain.Contracts.Repositories;
 using HotelCard.Infra.Data.Context;
+using HotelCard.Infra.Data.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration;
@@ -17,5 +19,10 @@ public static class DependencyInjection
             options.EnableDetailedErrors();
             options.EnableSensitiveDataLogging();
         });
+    }
+
+    public static void AddDependencyRepositories(this IServiceCollection service)
+    {
+        service.AddScoped<IEmployeeRepository, EmployeeRepository>();
     }
 }
