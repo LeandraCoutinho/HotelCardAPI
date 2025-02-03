@@ -21,19 +21,17 @@ public class EmailService : IEmailService
         _appSettings = appSettings.Value;
         _notificator = notificator;
     }
-
-
-    public async Task SendEmailFirstAccess(Employee employee, string password)
+    
+    public async Task SendPasswordRecovery(Employee employee)
     {
-        var url = $"{_appSettings.UrlComum}/login";
+        var url = $"{_appSettings.UrlComum}/resetar-senha?token={employee.TokenResetPassword}";
         
         var body =
             $"Olá {employee.Name},<br><br>" +
-            "Bem-vindo(a) ao nosso sistema.<br><br>" +
-            $"Sua senha temporária é: {password}<br><br>" +
-            $"<a href='{url}'>Login</a><br><br>" +
-            "Se precisar de assistência, entre em contato com nosso suporte.<br><br>" +
-            "Atenciosamente, Hotel Card";
+            "Você solicitou a redefinição de senha da sua conta no Hotel Card. Para continuar, clique no botão abaixo e siga as instruções para criar uma nova senha:<br><br>" +
+            $"<a href='{url}'>Redefinir Senha</a><br><br>" +
+            "Se você não solicitou essa alteração, por favor, ignore este e-mail ou entre em contato conosco imediatamente.<br><br>" +
+            "Atenciosamente, Hotel Card.";
 
         var mailData = new MailData
         {

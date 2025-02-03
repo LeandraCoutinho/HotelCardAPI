@@ -17,4 +17,9 @@ public class EmployeeRepository : BaseRepository<Employee>, IEmployeeRepository
 
         return employee;
     }
+
+    public async Task<Employee?> GetTokenResetPassword(string token)
+    {
+        return await Context.Employees.FirstOrDefaultAsync(e => e.TokenResetPassword == token);
+    }
 }

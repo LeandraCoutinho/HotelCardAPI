@@ -4,5 +4,5 @@ namespace HotelCard.Application.Contracts;
 
 public interface IEmailService
 {
-    Task SendEmailFirstAccess(Employee employee, string password);
+    Task SendPasswordRecovery(Employee employee);
 }

@@ -1,4 +1,5 @@
 using System.Reflection;
+using HotelCard.API.Configuration;
 using HotelCard.Application.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -21,6 +22,8 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.ConfigureSwagger();
+builder.Services.ConfigureAuthentication(builder.Configuration);
 builder.Services.SetupSettings(builder.Configuration);
 builder.Services.ConfigureApplication(builder.Configuration);
 builder.Services.AddDependencyServices();

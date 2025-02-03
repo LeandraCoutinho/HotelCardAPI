@@ -26,7 +26,7 @@ public abstract class BaseRepository<T> : IBaseRepository<T> where T : Entity
 
     public async Task Update(T entity)
     {
-        entity.CreatedAt = DateTime.Now;
+        entity.UpdatedAt = DateTime.Now;
         _dbSet.Entry(entity).State = EntityState.Modified;
         _dbSet.Update(entity);
     }

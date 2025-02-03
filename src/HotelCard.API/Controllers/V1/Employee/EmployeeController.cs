@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace HotelCard.API.Controllers.V1.Employee;
 
 [AllowAnonymous]
+[Route("[controller]")]
 public class EmployeeController : BaseController
 {
     private readonly IEmployeeService _employeeService;
@@ -16,7 +17,7 @@ public class EmployeeController : BaseController
         _employeeService = employeeService;
     }
     
-    [HttpPost("Adicionar_funcionario")]
+    [HttpPost("add-employee")]
     public async Task<IActionResult> Create([FromQuery]AddEmployeeDto employee)
     {
         return CustomResponse(await _employeeService.Create(employee));

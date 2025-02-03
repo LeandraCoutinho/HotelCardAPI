@@ -1,4 +1,5 @@
 using AutoMapper;
+using HotelCard.Application.Dtos.Auth;
 using HotelCard.Application.Dtos.Employee;
 using HotelCard.Domain.Entities;
 
@@ -12,6 +13,13 @@ public class AutoMapperProfile : Profile
 
         CreateMap<EmployeeDto, Employee>().ReverseMap();
         CreateMap<AddEmployeeDto, Employee>().ReverseMap();
+        CreateMap<LoginDto, Employee>();
+
+        #endregion
+
+        #region
+
+
 
         #endregion
     }

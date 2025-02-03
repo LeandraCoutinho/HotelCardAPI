@@ -174,7 +174,6 @@ C:\Users\leand\RiderProjects\HotelCard\src\HotelCard.API\bin\Debug\net8.0\AutoMa
 C:\Users\leand\RiderProjects\HotelCard\src\HotelCard.API\bin\Debug\net8.0\FluentValidation.dll
 C:\Users\leand\RiderProjects\HotelCard\src\HotelCard.API\bin\Debug\net8.0\Konscious.Security.Cryptography.Argon2.dll
 C:\Users\leand\RiderProjects\HotelCard\src\HotelCard.API\bin\Debug\net8.0\Konscious.Security.Cryptography.Blake2.dll
-C:\Users\leand\RiderProjects\HotelCard\src\HotelCard.API\bin\Debug\net8.0\System.Security.Permissions.dll
 C:\Users\leand\RiderProjects\HotelCard\src\HotelCard.API\obj\Debug\net8.0\HotelCard.API.sourcelink.json
 C:\Users\leand\RiderProjects\HotelCard\src\HotelCard.API\bin\Debug\net8.0\ScottBrady91.AspNetCore.Identity.Argon2PasswordHasher.dll
 C:\Users\leand\RiderProjects\HotelCard\src\HotelCard.API\bin\Debug\net8.0\Sodium.Core.dll
@@ -186,3 +185,16 @@ C:\Users\leand\RiderProjects\HotelCard\src\HotelCard.API\bin\Debug\net8.0\runtim
 C:\Users\leand\RiderProjects\HotelCard\src\HotelCard.API\bin\Debug\net8.0\Microsoft.Extensions.Localization.dll
 C:\Users\leand\RiderProjects\HotelCard\src\HotelCard.API\bin\Debug\net8.0\Microsoft.Extensions.Localization.Abstractions.dll
 C:\Users\leand\RiderProjects\HotelCard\src\HotelCard.API\bin\Debug\net8.0\Swashbuckle.AspNetCore.Annotations.dll
+C:\Users\leand\RiderProjects\HotelCard\src\HotelCard.API\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\leand\RiderProjects\HotelCard\src\HotelCard.API\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\leand\RiderProjects\HotelCard\src\HotelCard.API\bin\Debug\net8.0\Microsoft.AspNetCore.DataProtection.dll
+C:\Users\leand\RiderProjects\HotelCard\src\HotelCard.API\bin\Debug\net8.0\Microsoft.AspNetCore.DataProtection.Abstractions.dll
+C:\Users\leand\RiderProjects\HotelCard\src\HotelCard.API\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\leand\RiderProjects\HotelCard\src\HotelCard.API\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\leand\RiderProjects\HotelCard\src\HotelCard.API\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\leand\RiderProjects\HotelCard\src\HotelCard.API\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\leand\RiderProjects\HotelCard\src\HotelCard.API\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\leand\RiderProjects\HotelCard\src\HotelCard.API\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\leand\RiderProjects\HotelCard\src\HotelCard.API\bin\Debug\net8.0\NetDevPack.Security.Jwt.AspNetCore.dll
+C:\Users\leand\RiderProjects\HotelCard\src\HotelCard.API\bin\Debug\net8.0\NetDevPack.Security.Jwt.Core.dll
+C:\Users\leand\RiderProjects\HotelCard\src\HotelCard.API\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll

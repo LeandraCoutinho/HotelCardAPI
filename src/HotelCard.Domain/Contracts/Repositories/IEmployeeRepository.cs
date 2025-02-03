@@ -5,4 +5,5 @@ namespace HotelCard.Domain.Contracts.Repositories;
 public interface IEmployeeRepository : IBaseRepository<Employee>
 {
     Task<Employee?> Get(string email);
+    Task<Employee?> GetTokenResetPassword(string token);
 }

@@ -12,13 +12,11 @@ public class EmployeeService : BaseService, IEmployeeService
 {
     private readonly IEmployeeRepository _employeeRepository;
     private readonly IPasswordHasher<Employee> _hasher;
-    private readonly  IEmailService _emailService;
 
-    public EmployeeService(INotificator notificator, IMapper mapper, IEmployeeRepository employeeRepository, IPasswordHasher<Employee> hasher, IEmailService emailService) : base(notificator, mapper)
+    public EmployeeService(INotificator notificator, IMapper mapper, IEmployeeRepository employeeRepository, IPasswordHasher<Employee> hasher) : base(notificator, mapper)
     {
         _employeeRepository = employeeRepository;
         _hasher = hasher;
-        _emailService = emailService;
     }
 
     public async Task<EmployeeDto?> Create(AddEmployeeDto employeeDto)

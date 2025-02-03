@@ -18,6 +18,7 @@ public static class DependencyInjection
     {
         service.Configure<AppSettings>(configuration.GetSection("AppSettings"));
         service.Configure<EmailSettings>(configuration.GetSection("EmailSettings"));
+        service.Configure<JwtSettings>(configuration.GetSection("JwtSettings"));
     }
 
     public static void ConfigureApplication(this IServiceCollection service, IConfiguration configuration)
@@ -36,6 +37,7 @@ public static class DependencyInjection
 
         service
             .AddScoped<IEmployeeService, EmployeeService>()
-            .AddScoped<IEmailService, EmailService>();
+            .AddScoped<IEmailService, EmailService>()
+            .AddScoped<IAuthService, AuthService>();
     }
 }
