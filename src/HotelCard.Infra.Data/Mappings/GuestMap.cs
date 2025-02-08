@@ -19,11 +19,14 @@ public class GuestMap : IEntityTypeConfiguration<Guest>
         builder.Property(g => g.Cpf)
             .HasMaxLength(11);
 
-        builder.Property(g => g.CellPhone);
+        builder.Property(g => g.CellPhone)
+            .IsRequired(false);
 
-        builder.Property(g => g.Address);
+        builder.Property(g => g.Address)
+            .IsRequired(false);
 
-        builder.Property(g => g.IsHolder);
+        builder.Property(g => g.IsHolder)
+            .IsRequired(false);
 
         builder.Property(g => g.DateOfBirth);
 
@@ -33,6 +36,9 @@ public class GuestMap : IEntityTypeConfiguration<Guest>
         builder.Property(g => g.PhotoUrl)
             .IsRequired(false);
 
+        builder.Property(g => g.IsActive)
+            .HasDefaultValue(true);
+        
         builder.HasMany(g => g.GuestAccessAreas)
             .WithOne(ga => ga.Guest)
             .HasForeignKey(ga => ga.GuestId)

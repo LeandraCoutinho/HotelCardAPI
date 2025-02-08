@@ -45,6 +45,16 @@ public abstract class BaseRepository<T> : IBaseRepository<T> where T : Entity
     {
         _dbSet.Remove(entity);
     }
+    
+    public async Task UpdateRange(IEnumerable<T> entities)
+    {
+        foreach (var entity in entities)
+        {
+            entity.UpdatedAt = DateTime.Now;
+        }
+
+        _dbSet.UpdateRange(entities);
+    }
 
     public IUnitOfWork UnitOfWork => Context;
 }

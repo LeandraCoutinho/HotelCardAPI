@@ -38,6 +38,9 @@ public static class DependencyInjection
         service
             .AddScoped<IEmployeeService, EmployeeService>()
             .AddScoped<IEmailService, EmailService>()
-            .AddScoped<IAuthService, AuthService>();
+            .AddScoped<IAuthService, AuthService>()
+            .AddScoped<IGuestService, GuestService>()
+            .AddScoped<ICardService, CardService>()
+            .AddScoped<IContractService, ContractService>();
     }
 }

@@ -198,14 +198,12 @@ namespace HotelCard.Infra.Data.Data.Migrations
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Address")
-                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<ulong?>("CardOfNumber")
                         .HasColumnType("bigint unsigned");
 
                     b.Property<string>("CellPhone")
-                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<int?>("ContractId")
@@ -226,7 +224,12 @@ namespace HotelCard.Infra.Data.Data.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("varchar(100)");
 
-                    b.Property<bool>("IsHolder")
+                    b.Property<bool>("IsActive")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("tinyint(1)")
+                        .HasDefaultValue(true);
+
+                    b.Property<bool?>("IsHolder")
                         .HasColumnType("tinyint(1)");
 
                     b.Property<string>("Name")
