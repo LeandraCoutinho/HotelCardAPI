@@ -4,6 +4,7 @@ using HotelCard.Application.Dtos.Card;
 using HotelCard.Application.Dtos.Contract;
 using HotelCard.Application.Dtos.Employee;
 using HotelCard.Application.Dtos.Guest;
+using HotelCard.Application.Dtos.GuestFlow;
 using HotelCard.Domain.Entities;
 
 namespace HotelCard.Application.Configuration;
@@ -51,6 +52,15 @@ public class AutoMapperProfile : Profile
                 .ToList())).ReverseMap();
 
         CreateMap<AccessAreasDto, AccessArea>().ReverseMap();
+
+        #endregion
+        
+        #region GuestFlow
+        
+        CreateMap<GuestFlow, GuestFlowResponseDto>()
+            .ForMember(dest => dest.GuestName, opt => opt.MapFrom(src => src.Guest.Name))
+            .ForMember(dest => dest.AccessAreaName, opt => opt.MapFrom(src => src.AccessArea.Name));
+        CreateMap<GuestFlow, GuestFlowDto>().ReverseMap();
 
         #endregion
 

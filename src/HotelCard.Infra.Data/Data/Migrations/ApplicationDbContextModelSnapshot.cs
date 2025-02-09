@@ -265,6 +265,32 @@ namespace HotelCard.Infra.Data.Data.Migrations
                     b.ToTable("GuestAccessAreas");
                 });
 
+            modelBuilder.Entity("HotelCard.Domain.Entities.GuestFlow", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("AccessAreaId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("AccessTime")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<int>("GuestId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AccessAreaId");
+
+                    b.HasIndex("GuestId");
+
+                    b.ToTable("GuestFlow");
+                });
+
             modelBuilder.Entity("HotelCard.Domain.Entities.Product", b =>
                 {
                     b.Property<int>("Id")
@@ -413,6 +439,25 @@ namespace HotelCard.Infra.Data.Data.Migrations
 
                     b.HasOne("HotelCard.Domain.Entities.Guest", "Guest")
                         .WithMany("GuestAccessAreas")
+                        .HasForeignKey("GuestId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("AccessArea");
+
+                    b.Navigation("Guest");
+                });
+
+            modelBuilder.Entity("HotelCard.Domain.Entities.GuestFlow", b =>
+                {
+                    b.HasOne("HotelCard.Domain.Entities.AccessArea", "AccessArea")
+                        .WithMany()
+                        .HasForeignKey("AccessAreaId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("HotelCard.Domain.Entities.Guest", "Guest")
+                        .WithMany()
                         .HasForeignKey("GuestId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();

@@ -16,7 +16,7 @@ public class ApplicationDbContext : DbContext, IUnitOfWork
     public DbSet<Consumption> Consumptions { get; set; }
 
     public DbSet<ConsumptionProduct> ConsumptionProducts { get; set; }
-
+    
     public DbSet<Contract> Contracts { get; set; }
 
     public DbSet<ContractRoom> ContractRooms { get; set; }
@@ -28,6 +28,7 @@ public class ApplicationDbContext : DbContext, IUnitOfWork
     public DbSet<Product> Products { get; set; }
 
     public DbSet<Room> Rooms { get; set; }
+    public DbSet<GuestFlow> GuestFlow { get; set; }
     
     public async Task<bool> Commit() => await SaveChangesAsync() > 0;
     

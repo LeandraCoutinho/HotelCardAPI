@@ -33,7 +33,9 @@ public class GuestRepository : BaseRepository<Guest>, IGuestRepository
 
     public async Task<Guest?> GetByCardOfNumber(ulong cardOfNumber)
     {
-        return await Context.Guests.FirstOrDefaultAsync(g => g.CardOfNumber == cardOfNumber);
+        return await Context.Guests
+            .Include(g => g.GuestAccessAreas)
+            .FirstOrDefaultAsync(g => g.CardOfNumber == cardOfNumber);
     }
 
     public async Task<List<Guest>> GetInactive()
