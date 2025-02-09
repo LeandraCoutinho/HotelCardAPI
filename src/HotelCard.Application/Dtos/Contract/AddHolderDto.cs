@@ -1,4 +1,4 @@
-namespace HotelCard.Application.Dtos.Guest;
+namespace HotelCard.Application.Dtos.Contract;
 
 public class AddHolderDto
 {

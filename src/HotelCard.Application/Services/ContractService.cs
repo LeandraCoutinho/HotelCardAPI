@@ -20,13 +20,14 @@ public class ContractService : BaseService, IContractService
         _accessAreaRepository = accessAreaRepository;
     }
 
-    public async Task<ContractDto> Create(ContractDto contractDto)
+    public async Task<ContractDto?> Create(ContractDto contractDto)
     {
         var isHolderRoomAvailable = await _roomRepository.IsCheckAvailability(contractDto.Holder.Room);
 
         if (!isHolderRoomAvailable)
         {
             Notificator.Handle("Quarto do titular não está disponível.");
+            return null;
         }
 
         foreach (var dependent in contractDto.Dependents)
@@ -36,15 +37,9 @@ public class ContractService : BaseService, IContractService
             if (!isDependentRoomAvailable)
             {
                 Notificator.Handle("Quarto do dependente não está disponível.");
+                return null;
             }
         }
-        
-        var allAccessAreaIds = contractDto.Holder.AccessAreaIds
-            .Concat(contractDto.Dependents.SelectMany(d => d.AccessAreaIds))
-            .Distinct()
-            .ToList();
-
-        var accessAreas = await _accessAreaRepository.GetByIds(allAccessAreaIds);
         
         var holderGuest = new Guest
         {
@@ -94,6 +89,8 @@ public class ContractService : BaseService, IContractService
             ContractRooms = new List<ContractRoom>() 
         };
         
+        contract.HolderId = holderGuest.Id;
+        
         contract.ContractRooms.Add(new ContractRoom
         {
             Contract = contract,
@@ -119,7 +116,9 @@ public class ContractService : BaseService, IContractService
         
         if (await CommitChanges())
         {
-            return Mapper.Map<ContractDto>(contractCreated);
+            var contractWithDetails = await _contractRepository.GetById(contractCreated.Id, true);
+
+            return Mapper.Map<ContractDto>(contractWithDetails);
         }
         
         Notificator.Handle("Não foi possivel criar a entidade.");

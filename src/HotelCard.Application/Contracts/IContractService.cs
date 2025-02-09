@@ -4,5 +4,5 @@ namespace HotelCard.Application.Contracts;
 
 public interface IContractService
 {
-    Task<ContractDto> Create(ContractDto contractDto);
+    Task<ContractDto?> Create(ContractDto contractDto);
 }

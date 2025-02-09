@@ -14,8 +14,8 @@ public class Guest : Entity
     public DateOnly DateOfBirth { get; set; }
     public ulong? CardOfNumber { get; set; }
     public string? PhotoUrl { get; set; }
-    public IList<Consumption> Consumptions { get; set; } = new List<Consumption>();
-    public IList<GuestAccessArea> GuestAccessAreas { get; set; } = new List<GuestAccessArea>();
+    public List<Consumption> Consumptions { get; set; } = new List<Consumption>();
+    public List<GuestAccessArea> GuestAccessAreas { get; set; } = new List<GuestAccessArea>();
     public bool IsActive { get; set; } = true;
     
     public List<ValidationFailure> Validate()

@@ -1,5 +1,3 @@
-using HotelCard.Domain.Entities;
-
 namespace HotelCard.Application.Dtos.Guest;
 
 public class GuestDto
@@ -14,5 +12,5 @@ public class GuestDto
     public ulong? CardOfNumber { get; set; }
     public string? PhotoUrl { get; set; }
     public bool IsActive { get; set; }
-    public IList<AccessArea> AccessAreas { get; set; }
+    public IList<AccessAreasDto> AccessAreas { get; set; }
 }

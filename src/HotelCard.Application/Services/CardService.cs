@@ -28,11 +28,11 @@ public class CardService : BaseService, ICardService
         }
 
         guest.CardOfNumber = registerCardDto.CardOfNumber;
-        var guestUpdated =_guestRepository.Update(guest);
+        await _guestRepository.Update(guest);
             
         if (await CommitChanges())
         {
-            return Mapper.Map<GuestDto>(guestUpdated);
+            return Mapper.Map<GuestDto>(guest);
         }
         
         Notificator.Handle("Não foi possível atualizar o número do cartão.");

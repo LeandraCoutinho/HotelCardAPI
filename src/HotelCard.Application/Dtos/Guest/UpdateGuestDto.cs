@@ -1,13 +1,13 @@
-namespace HotelCard.Application.Dtos.Contract;
+namespace HotelCard.Application.Dtos.Guest;
 
-public class AddDependentDto
+public class UpdateGuestDto
 {
+    public int Id { get; set; }
     public string Name { get; set; } = null!;
     public string Email { get; set; } = null!;
-    public bool IsHolder { get; set; } = false;
+    public string CellPhone { get; set; } = null!;
     public ulong Cpf { get; set; }
     public DateOnly DateOfBirth { get; set; }
     public string? PhotoUrl { get; set; }
-    public int Room { get; set; }
     public List<int> AccessAreaIds { get; set; } = new List<int>();
 }

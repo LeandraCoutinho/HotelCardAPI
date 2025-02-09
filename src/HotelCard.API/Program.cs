@@ -1,4 +1,5 @@
 using System.Reflection;
+using System.Text.Json.Serialization;
 using HotelCard.API.Configuration;
 using HotelCard.Application.Configuration;
 
@@ -27,6 +28,13 @@ builder.Services.ConfigureAuthentication(builder.Configuration);
 builder.Services.SetupSettings(builder.Configuration);
 builder.Services.ConfigureApplication(builder.Configuration);
 builder.Services.AddDependencyServices();
+
+builder.Services.AddControllers()
+    .AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.PropertyNameCaseInsensitive = true; 
+        options.JsonSerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull; 
+    });
 
 var app = builder.Build();
 
