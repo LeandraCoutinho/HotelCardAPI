@@ -30,6 +30,14 @@ public class ConsumptionRepository : IConsumptionRepository
             .ToListAsync();
     }
 
+    public async Task<IList<Consumption>> GetByGuestCard(ulong cardOfNumber)
+    {
+        return await _context.Consumptions
+            .Where(c => c.Guest.CardOfNumber == cardOfNumber)
+            .Include(c => c.ConsumptionProducts)
+            .ThenInclude(cp => cp.Product)
+            .ToListAsync();    }
+
     public async Task<IList<Consumption>> GetAll()
     {
         return await _context.Consumptions

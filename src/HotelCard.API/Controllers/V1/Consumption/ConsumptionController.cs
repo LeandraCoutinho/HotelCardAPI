@@ -19,7 +19,7 @@ public class ConsumptionController : BaseController
         _consumptionService = consumptionService;
     }
     
-    //[Authorize(Roles = nameof(ERole.Operator))]
+    [Authorize(Roles = nameof(ERole.Operator))]
     [HttpPost("create-consumption")]
     [ProducesResponseType(typeof(ConsumptionDto), StatusCodes.Status201Created)]
     [ProducesResponseType(StatusCodes.Status401Unauthorized)]
@@ -29,7 +29,7 @@ public class ConsumptionController : BaseController
         return CustomResponse(await _consumptionService.Add(dto));
     }
     
-    //[Authorize]
+    [Authorize]
     [HttpGet("get-consumption-by-guest")]
     [ProducesResponseType(StatusCodes.Status401Unauthorized)]
     [ProducesResponseType(StatusCodes.Status200OK)]
@@ -38,7 +38,16 @@ public class ConsumptionController : BaseController
         return CustomResponse(await _consumptionService.GetConsumptionByGuest(cpf));
     }
     
-    //[Authorize]
+    [Authorize]
+    [HttpGet("get-consumption-by-card")]
+    [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    public async Task<IActionResult> GetGuestByCard([FromQuery] ulong card)
+    {
+        return CustomResponse(await _consumptionService.GetConsumptionByCard(card));
+    }
+    
+    [Authorize]
     [HttpGet("get-all")]
     [ProducesResponseType(StatusCodes.Status401Unauthorized)]
     [ProducesResponseType(StatusCodes.Status200OK)]

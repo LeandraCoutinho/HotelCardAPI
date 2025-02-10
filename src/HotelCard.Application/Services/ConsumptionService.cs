@@ -125,6 +125,48 @@ public class ConsumptionService : BaseService, IConsumptionService
         return consumptionDtos;
     }
 
+    public async Task<List<ConsumptionDto>?> GetConsumptionByCard(ulong cardOfNumber)
+    {
+        var guest = await _guestRepository.GetByCardOfNumber(cardOfNumber);
+        if (guest is null)
+        {
+            Notificator.Handle("Hóspede não encontrado.");
+            return null;
+        }
+
+        var consumptions = await _consumptionRepository.GetByGuestId(guest.Id);
+        if (!consumptions.Any())
+        {
+            Notificator.Handle("Nenhuma consumação encontrada para este hóspede.");
+            return null;
+        }
+
+        var consumptionDtos = new List<ConsumptionDto>();
+
+        foreach (var consumption in consumptions)
+        {
+            var consumptionDto = new ConsumptionDto
+            {
+                Id = consumption.Id,
+                GuestName = guest.Name, 
+                DateConsumption = consumption.DateConsumption,
+                Products = consumption.ConsumptionProducts
+                    .Select(cp => new ProductDto
+                    {
+                        ProductId = cp.ProductId,
+                        Price = _productRepository.GetById(cp.ProductId).Result?.Price ?? 0, 
+                        Quantity = cp.Quantity,
+                        TotalValue = cp.TotalValue
+                    })
+                    .ToList()
+            };
+
+            consumptionDtos.Add(consumptionDto);
+        }
+
+        return consumptionDtos;
+    }
+
     public async Task<List<ConsumptionDto>> GetAll()
     {
         var consumptions = await _consumptionRepository.GetAll();

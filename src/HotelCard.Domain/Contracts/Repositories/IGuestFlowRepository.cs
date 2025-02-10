@@ -8,4 +8,5 @@ public interface IGuestFlowRepository
     Task<List<GuestFlow>> GetAll();
     IUnitOfWork UnitOfWork { get; }
     Task<List<GuestFlow>> GetByCpf(ulong cpf);
+    Task<List<GuestFlow>> GetByCard(ulong cardOfNumber);
 }

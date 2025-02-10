@@ -79,6 +79,19 @@ public class GuestFlowService : BaseService, IGuestFlowService
         return Mapper.Map<List<GuestFlowResponseDto>>(flowsByGuest);
     }
 
+    public async Task<List<GuestFlowResponseDto>> GetFlowsByCard(ulong cardOfNumber)
+    {
+        var flowsByGuest = await _guestFlowRepository.GetByCard(cardOfNumber);
+
+        if (flowsByGuest.Count == 0)
+        {
+            Notificator.Handle("Hóspede não possui fluxo.");
+            return new List<GuestFlowResponseDto>(); 
+        }
+
+        return Mapper.Map<List<GuestFlowResponseDto>>(flowsByGuest);
+    }
+
 
     async Task<bool> CommitChanges() => await _guestFlowRepository.UnitOfWork.Commit();
 }

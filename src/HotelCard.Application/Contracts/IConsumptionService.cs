@@ -6,5 +6,6 @@ public interface IConsumptionService
 {
     Task<ConsumptionDto?> Add(AddConsumptionDto consumptionDto);
     Task<List<ConsumptionDto>?> GetConsumptionByGuest(ulong cpf);
+    Task<List<ConsumptionDto>?> GetConsumptionByCard(ulong cardOfNumber);
     Task<List<ConsumptionDto>> GetAll();
 }

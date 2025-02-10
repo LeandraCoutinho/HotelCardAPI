@@ -43,4 +43,13 @@ public class GuestFlowController : BaseController
     {
         return CustomResponse(await _guestFlowService.GetFlowsByCpf(cpf));
     }
+    
+    [Authorize]
+    [HttpGet("get-guest-by-card")]
+    [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    public async Task<IActionResult> GetGuestByCard(ulong card)
+    {
+        return CustomResponse(await _guestFlowService.GetFlowsByCard(card));
+    }
 }

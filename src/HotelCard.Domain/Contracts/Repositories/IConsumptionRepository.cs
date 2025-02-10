@@ -6,6 +6,7 @@ public interface IConsumptionRepository
 {
     Task<Consumption> Add(Consumption consumption);
     Task<IList<Consumption>> GetByGuestId(int guestId);
+    Task<IList<Consumption>> GetByGuestCard(ulong cardOfNumber);
     Task<IList<Consumption>> GetAll();
     IUnitOfWork UnitOfWork { get; }
 }

@@ -3,3 +3,36 @@ obj/
 /packages/
 riderModule.iml
 /_ReSharper.Caches/
+
+src/HotelCard.API/obj
+src/HotelCard.Application/obj
+src/HotelCard.Core/obj
+src/HotelCard.Domain/obj
+src/HotelCard.Infra.Data/obj
+
+src/HotelCard.API/bin
+src/HotelCard.Application/bin
+src/HotelCard.Core/bin
+src/HotelCard.Domain/bin
+src/HotelCard.Infra.Data/bin
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# .NET
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Tye
+.tye/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# StyleCop
+StyleCopReport.xml

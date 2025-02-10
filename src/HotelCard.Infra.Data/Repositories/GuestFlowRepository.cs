@@ -37,6 +37,15 @@ public class GuestFlowRepository : IGuestFlowRepository
             .Where(gf => gf.Guest.Cpf == cpf) 
             .ToListAsync();
     }
-    
+
+    public async Task<List<GuestFlow>> GetByCard(ulong cardOfNumber)
+    {
+        return await _context.GuestFlow
+            .Include(gf => gf.Guest) 
+            .Include(gf => gf.AccessArea) 
+            .Where(gf => gf.Guest.CardOfNumber == cardOfNumber) 
+            .ToListAsync();
+    }
+
     public IUnitOfWork UnitOfWork => _context;
 }
