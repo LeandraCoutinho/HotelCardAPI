@@ -52,6 +52,8 @@ public class AuthService : BaseService, IAuthService
         {
             return new TokenDto()
             {
+                Name = employee.Name,
+                Email = employee.Email,
                 Token = await GenerateToken(employee)
             };
         }

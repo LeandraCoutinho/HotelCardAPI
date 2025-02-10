@@ -63,11 +63,4 @@ public class GuestRepository : BaseRepository<Guest>, IGuestRepository
             .ThenInclude(ga => ga.AccessArea) 
             .ToListAsync();
     }
-    
-    public async Task<Guest> UpdateGuest(Guest guest)
-    {
-        Context.Guests.Update(guest);
-        await Context.SaveChangesAsync(); 
-        return guest;
-    }
 }

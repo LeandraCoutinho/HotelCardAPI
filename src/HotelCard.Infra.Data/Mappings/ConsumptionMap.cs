@@ -16,7 +16,7 @@ public class ConsumptionMap : IEntityTypeConfiguration<Consumption>
         builder.Property(c => c.PaymentId)
             .IsRequired()
             .HasConversion<string>(); 
-
+        
         builder.HasOne(c => c.Guest)
             .WithMany(g => g.Consumptions)
             .HasForeignKey(c => c.GuestId)
@@ -24,6 +24,7 @@ public class ConsumptionMap : IEntityTypeConfiguration<Consumption>
 
         builder.HasMany(c => c.ConsumptionProducts)
             .WithOne(cp => cp.Consumption)
-            .HasForeignKey(cp => cp.ConsumptionId);
+            .HasForeignKey(cp => cp.ConsumptionId)
+            .OnDelete(DeleteBehavior.Cascade);
     }
 }

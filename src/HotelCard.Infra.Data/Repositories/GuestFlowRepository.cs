@@ -29,5 +29,14 @@ public class GuestFlowRepository : IGuestFlowRepository
             .ToListAsync();
     }
     
+    public async Task<List<GuestFlow>> GetByCpf(ulong cpf)
+    {
+        return await _context.GuestFlow
+            .Include(gf => gf.Guest) 
+            .Include(gf => gf.AccessArea) 
+            .Where(gf => gf.Guest.Cpf == cpf) 
+            .ToListAsync();
+    }
+    
     public IUnitOfWork UnitOfWork => _context;
 }

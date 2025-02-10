@@ -35,4 +35,12 @@ public class GuestFlowController : BaseController
     {
         return CustomResponse(await _guestFlowService.GetFlows());
     }
+    
+    [HttpGet("get-guest-by-cpf")]
+    [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    public async Task<IActionResult> GetGuestByCpf(ulong cpf)
+    {
+        return CustomResponse(await _guestFlowService.GetFlowsByCpf(cpf));
+    }
 }

@@ -69,14 +69,9 @@ namespace HotelCard.Infra.Data.Data.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<int>("ProductId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
                     b.HasIndex("GuestId");
-
-                    b.HasIndex("ProductId");
 
                     b.ToTable("Consumptions");
                 });
@@ -91,6 +86,9 @@ namespace HotelCard.Infra.Data.Data.Migrations
 
                     b.Property<int>("Quantity")
                         .HasColumnType("int");
+
+                    b.Property<double?>("TotalValue")
+                        .HasColumnType("double");
 
                     b.HasKey("ConsumptionId", "ProductId");
 
@@ -361,15 +359,7 @@ namespace HotelCard.Infra.Data.Data.Migrations
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("HotelCard.Domain.Entities.Product", "Product")
-                        .WithMany()
-                        .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.Navigation("Guest");
-
-                    b.Navigation("Product");
                 });
 
             modelBuilder.Entity("HotelCard.Domain.Entities.ConsumptionProduct", b =>

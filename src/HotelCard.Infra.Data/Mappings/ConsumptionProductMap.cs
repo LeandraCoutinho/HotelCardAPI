@@ -22,5 +22,8 @@ public class ConsumptionProductMap : IEntityTypeConfiguration<ConsumptionProduct
 
         builder.Property(cp => cp.Quantity)
             .IsRequired();
+
+        builder.Property(c => c.TotalValue)
+            .IsRequired(false);
     }
 }

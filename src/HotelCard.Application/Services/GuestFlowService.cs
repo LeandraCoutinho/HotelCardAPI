@@ -65,6 +65,20 @@ public class GuestFlowService : BaseService, IGuestFlowService
         var flows = await _guestFlowRepository.GetAll();
         return Mapper.Map<List<GuestFlowResponseDto>>(flows);
     }
-    
+
+    public async Task<List<GuestFlowResponseDto>> GetFlowsByCpf(ulong cpf)
+    {
+        var flowsByGuest = await _guestFlowRepository.GetByCpf(cpf);
+
+        if (flowsByGuest.Count == 0)
+        {
+            Notificator.Handle("Hóspede não possui fluxo.");
+            return new List<GuestFlowResponseDto>(); 
+        }
+
+        return Mapper.Map<List<GuestFlowResponseDto>>(flowsByGuest);
+    }
+
+
     async Task<bool> CommitChanges() => await _guestFlowRepository.UnitOfWork.Commit();
 }

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HotelCard.Infra.Data")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+28609383d1c9b35aacf2fcbd90c120afefd6c38d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8a8c5da884898f107caeade2cb313aae06cf6b53")]
 [assembly: System.Reflection.AssemblyProductAttribute("HotelCard.Infra.Data")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HotelCard.Infra.Data")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

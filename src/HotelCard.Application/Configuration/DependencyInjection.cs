@@ -42,6 +42,7 @@ public static class DependencyInjection
             .AddScoped<IGuestService, GuestService>()
             .AddScoped<ICardService, CardService>()
             .AddScoped<IContractService, ContractService>()
-            .AddScoped<IGuestFlowService, GuestFlowService>();
+            .AddScoped<IGuestFlowService, GuestFlowService>()
+            .AddScoped<IConsumptionService, ConsumptionService>();
     }
 }

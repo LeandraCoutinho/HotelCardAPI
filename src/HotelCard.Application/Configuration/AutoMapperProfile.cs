@@ -1,6 +1,7 @@
 using AutoMapper;
 using HotelCard.Application.Dtos.Auth;
 using HotelCard.Application.Dtos.Card;
+using HotelCard.Application.Dtos.Consumption;
 using HotelCard.Application.Dtos.Contract;
 using HotelCard.Application.Dtos.Employee;
 using HotelCard.Application.Dtos.Guest;
@@ -61,6 +62,26 @@ public class AutoMapperProfile : Profile
             .ForMember(dest => dest.GuestName, opt => opt.MapFrom(src => src.Guest.Name))
             .ForMember(dest => dest.AccessAreaName, opt => opt.MapFrom(src => src.AccessArea.Name));
         CreateMap<GuestFlow, GuestFlowDto>().ReverseMap();
+
+        #endregion
+        
+        #region Consumption
+        
+        CreateMap<AddConsumptionDto, Consumption>()
+            .ForMember(dest => dest.GuestId, opt => opt.Ignore()) 
+            .ForMember(dest => dest.DateConsumption, opt => opt.Ignore()) 
+            .ForMember(dest => dest.PaymentId, opt => opt.MapFrom(src => src.Payment))
+            .ForMember(dest => dest.ConsumptionProducts, opt => opt.MapFrom(src => src.Products));
+
+        CreateMap<ProductConsumptionDto, ConsumptionProduct>()
+            .ForMember(dest => dest.ProductId, opt => opt.MapFrom(src => src.ProductId))
+            .ForMember(dest => dest.Quantity, opt => opt.MapFrom(src => src.Quantity));
+
+        CreateMap<Consumption, ConsumptionDto>()
+            .ForMember(dest => dest.GuestName, opt => opt.MapFrom(src => src.Guest.Name)) 
+            .ForMember(dest => dest.Products, opt => opt.MapFrom(src => src.ConsumptionProducts));
+
+        CreateMap<ConsumptionProduct, ProductDto>().ReverseMap();
 
         #endregion
 

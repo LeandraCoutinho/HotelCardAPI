@@ -11,13 +11,11 @@ public class ContractService : BaseService, IContractService
 {
     private readonly IContractRepository _contractRepository;
     private readonly IRoomRepository _roomRepository;
-    private readonly IAccessAreaRepository _accessAreaRepository;
 
-    public ContractService(INotificator notificator, IMapper mapper, IContractRepository contractRepository, IRoomRepository roomRepository, IAccessAreaRepository accessAreaRepository) : base(notificator, mapper)
+    public ContractService(INotificator notificator, IMapper mapper, IContractRepository contractRepository, IRoomRepository roomRepository) : base(notificator, mapper)
     {
         _contractRepository = contractRepository;
         _roomRepository = roomRepository;
-        _accessAreaRepository = accessAreaRepository;
     }
 
     public async Task<ContractDto?> Create(ContractDto contractDto)

@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace HotelCard.API.Controllers.V1.Contract;
 
+[AllowAnonymous]
 [Route("[controller]")]
 public class ContractController : BaseController
 {
@@ -17,7 +18,7 @@ public class ContractController : BaseController
         _contractService = contractService;
     }
     
-    [Authorize(Roles = nameof(ERole.Administrator))]
+    //[Authorize(Roles = nameof(ERole.Administrator))]
     [HttpPost("create-contract")]
     [ProducesResponseType(typeof(ContractDto), StatusCodes.Status201Created)]
     [ProducesResponseType(StatusCodes.Status401Unauthorized)]
