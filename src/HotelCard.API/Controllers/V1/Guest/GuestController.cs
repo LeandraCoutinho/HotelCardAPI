@@ -18,12 +18,21 @@ public class GuestController : BaseController
     }
     
     [Authorize]
-    [HttpGet("get-guest")]
+    [HttpGet("get-guest-by-card")]
     [ProducesResponseType(StatusCodes.Status401Unauthorized)]
     [ProducesResponseType(StatusCodes.Status200OK)]
-    public async Task<IActionResult> GetGuest([FromQuery] ulong cardOfNumber)
+    public async Task<IActionResult> GetGuestByCard([FromQuery] ulong cardOfNumber)
     {
-        return CustomResponse(await _guestService.GetGuest(cardOfNumber));
+        return CustomResponse(await _guestService.GetGuestByCard(cardOfNumber));
+    }
+    
+    [Authorize]
+    [HttpGet("get-guest-by-email")]
+    [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    public async Task<IActionResult> GetGuestByEmail(string email)
+    {
+        return CustomResponse(await _guestService.GetGuestByEmail(email));
     }
     
     [Authorize]

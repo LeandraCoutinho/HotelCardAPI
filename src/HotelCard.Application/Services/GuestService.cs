@@ -59,7 +59,7 @@ public class GuestService : BaseService, IGuestService
         return null;
     }
 
-    public async Task<GuestDto?> GetGuest(ulong cardOfNumber)
+    public async Task<GuestDto?> GetGuestByCard(ulong cardOfNumber)
     {
         var guest = await _guestRepository.GetByCardOfNumber(cardOfNumber);
         
@@ -70,6 +70,19 @@ public class GuestService : BaseService, IGuestService
         }
 
         return Mapper.Map<GuestDto>(guest);
+    }
+
+    public async Task<GuestResponseDto?> GetGuestByEmail(string email)
+    {
+        var guest = await _guestRepository.GetByEmail(email);
+        
+        if (guest is null)
+        {
+            Notificator.Handle("Hóspede não encontrado na base de dados.");
+            return null;
+        }
+
+        return Mapper.Map<GuestResponseDto>(guest);
     }
 
     public async Task<List<GuestDto>> GetAll()

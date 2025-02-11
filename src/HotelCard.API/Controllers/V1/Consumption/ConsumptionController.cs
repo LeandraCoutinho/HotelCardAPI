@@ -1,6 +1,5 @@
 using HotelCard.Application.Contracts;
 using HotelCard.Application.Dtos.Consumption;
-using HotelCard.Application.Dtos.Contract;
 using HotelCard.Application.Notification;
 using HotelCard.Core.Enums;
 using Microsoft.AspNetCore.Authorization;

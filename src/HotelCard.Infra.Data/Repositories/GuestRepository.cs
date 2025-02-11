@@ -38,6 +38,13 @@ public class GuestRepository : BaseRepository<Guest>, IGuestRepository
             .FirstOrDefaultAsync(g => g.CardOfNumber == cardOfNumber);
     }
 
+    public async Task<Guest?> GetByEmail(string email)
+    {
+        return await Context.Guests
+            .Include(g => g.GuestAccessAreas)
+            .FirstOrDefaultAsync(g => g.Email == email);
+    }
+
     public async Task<List<Guest>> GetInactive()
     {
         return await Context.Guests.Where

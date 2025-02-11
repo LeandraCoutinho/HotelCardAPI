@@ -53,7 +53,8 @@ public class AutoMapperProfile : Profile
                 .ToList())).ReverseMap();
 
         CreateMap<AccessAreasDto, AccessArea>().ReverseMap();
-
+        CreateMap<GuestResponseDto, Guest>().ReverseMap();
+        
         #endregion
         
         #region GuestFlow
